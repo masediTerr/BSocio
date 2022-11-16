@@ -1,0 +1,94 @@
+<div class="main-u">
+  <div class="ux-mode">
+    <div class="ux-frame">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="workspace-mode">
+    
+    <div class="switch-mode">
+      <searchBar></searchBar>
+      <div class="management-table" for="all">
+        <div class="hello"></div>
+        <div class="adjustables">
+          <div class="cont">
+            <span for="">{{contributeTo}}</span>
+            <input type="checkbox" name="workspace"  id="uSelected" hidden>
+            <label id="cont" for="uSelected"><i>></i></label>
+            <div [class]="switchCase" >
+              <ul *ngFor="let to of contributes">
+                <label for="uSelected" (click)="selectForAll(to)">{{to.to}}</label>
+
+              </ul>
+              <!-- <label for="uSelected" (click)="contributeTo='Members'">Members</label>
+              <label for="uSelected" (click)="contributeTo='News'">News</label>
+              <label for="uSelected" (click)="contributeTo='Villages'">Villages</label> -->
+
+            </div>
+          </div>
+        </div>
+        <div class="table-data">
+          <table id="dta" [cellSpacing]="0" autocapitalize="words">
+            <tr id='thead'>
+              <th>No#</th>
+              <th  class="mem">Members Fullnames</th>
+              <th  class="mem">Contributes to.</th>
+              <th>Action</th>
+              <th colspan="1">Standing</th>
+              <th colspan=""></th>
+              <th *ngIf="toAll"><div class="mark">
+                <small> Un-mark</small>
+                <input (click)="unMarkAll()" checked type="checkbox" name="u-s" id="all">
+              </div>
+            </th>
+              <th *ngIf="!toAll"><div class="mark">
+                <small>mark all</small>
+                <input (click)="markAll()" type="checkbox" name="u-s" id="all">
+              </div>
+            </th>
+            </tr>
+            <tbody >
+              
+              <tr class=" default {{user.checkedClass}}" id="underline" *ngFor="let user of Users" >
+                <td>{{user.id}}</td>
+                <td class="mem na"><label for="{{user.id}}">{{user.fullname}}</label></td>
+                <td class="mem"><label for="{{user.id}}">
+
+                  <div class="cont">
+                    <span for="" *ngIf="toForAll">{{contributeTo}}</span>
+                    <span for="" *ngIf="user.singleActive && toForAll== false">{{user.to}}</span>
+
+                    <input type="checkbox" name="workspace" id="uSelected" hidden>
+                    <label class="conts" for="" (click)="route(user)"><i>></i></label>
+
+                    <div [class]="switchCase" [ngClass]="user.class">
+                      <ul >
+
+                        <label  *ngFor="let to of contributes" for="" (click)="selectedUse(user,to)">{{to.to}}</label>
+                      </ul>
+                      <!-- (click)="user.class = (user.class == 'hidden')?'active':'hidden'" -->
+                      <!-- <label for="uSelected" (click)="contributeTo='Members'">Members</label>
+                      <label for="uSelected" (click)="contributeTo='News'">News</label>
+                      <label for="uSelected" (click)="contributeTo='Villages'">Villages</label> -->
+  
+                    </div>
+                  </div>
+                  </label>
+                </td>
+                <td id="fn"><form action=""><button [disabled]="false" type="submit">DECLARE<span>PAID</span></button></form></td>
+                <td><span id="standing">{{user.standing}}</span></td>
+                <td class="option-admin"><label class="options-admin" for="option">...</label></td>
+                <td><input type="checkbox" name="s-u" (click)="checked(user)" value="{{user.id}}" id="{{user.id}}" ></td>
+              </tr>
+
+            </tbody>
+            
+
+          </table>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+</div>

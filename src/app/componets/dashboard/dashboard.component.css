@@ -1,0 +1,222 @@
+.user-profile{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background:  #cfb6b6b7;
+  backdrop-filter: blur(5px);
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0 auto;
+  
+}
+#villages{
+  width: 90%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  
+  margin-right: 10px;
+}
+ul button{
+  
+  outline: none;
+  height: 25px;
+}
+.u-section{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.user-profile li{
+  padding: 1px 12px;
+  color: #161414;
+}
+li span{
+  color: #362b2bd9;
+
+}
+.user-profile ul li:hover{
+  color: #302b2bb4;
+  background-color: rgba(255, 255, 255, 0.527);
+}
+ul:last-child:not(#villages){
+  margin-top: 35px;
+}
+.dots{
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 2px 4px;
+  line-height: .5;
+  position: relative;
+}
+.option{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+form{
+  width: 90%;
+  height: 150px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.headers{
+  background-color: white;
+  height: 25px;
+  display: flex;
+  width: 102%;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: -7px;
+  padding: 3px 3px 3px 8px;
+  box-shadow: 2px 6px 8px -4px;
+}
+.dots>label{
+  padding: 4px;
+  cursor: alias;
+  width: 100%;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+.switch-cases{
+  flex-direction: column;
+  position: absolute;
+  width: 12rem;
+  top: 25px;
+  right: 0;
+  padding: 10px 0;
+  z-index: 3;
+  background: linear-gradient(50deg,#ffffff36,#0000221a);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 14px -9px black;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  border-radius: 2px;
+  line-height: 1;
+}
+.switch-cases label{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  
+}
+.switch-cases label:hover:not(:last-child){
+  border-bottom: 1px solid #33333363;
+}
+.switch-cases label:hover{
+  opacity: .7;
+}
+.modal span{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal span:hover{
+  background: rgba(255, 255, 255, 0.671);
+}
+.popup{
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  background-color: blueviolet;
+  z-index: 4;
+  top: 70px;
+  left:  40px;
+  border-radius: 6px;
+}
+.user-req{
+  display: flex;
+  font-weight: 300;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 20px 0;
+  margin: 3px 4px 8px 3px;
+}
+.user-req label{
+  padding: 5px 10px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 166, 0, 0.519);
+}
+#repay:checked ~ label{
+  box-shadow: 1px 1px 4px -1px black;
+  scale: 1.1;
+  background: orange;
+}
+#loan:checked ~ label{
+  scale: 1.1;
+  box-shadow: 1px 1px 4px -1px black;
+  background: orange;
+}
+.user-req label:hover{
+  box-shadow: 1px 1px 4px -1px black;
+  background: orange;
+}
+.grp-btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+input{
+  font-size: 2rem;
+  width: calc(80% - 20px);
+  padding: 4px 8px;
+  outline: none;
+}
+input::placeholder{
+  color: blue;
+  font-size: 17px;
+}
+.btn-group{
+  margin-top: 5px;
+  background-color: red;
+  width: 80%;
+}
+.grp-btn,.btn-group button{
+  width: 50%;
+  font-size: 14px;
+  height: auto;
+  padding: 8px 0;
+  
+}
+.close{
+  position: absolute;
+  right: 0;
+  margin: 5px;
+  transform: rotate(45deg);
+  background-color: rgba(255, 0, 0, 0.884);
+  color: rgba(255, 255, 255, 0.801);
+  width: 24px;height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+:is(#uBs:checked) ~ .switch-cases{
+  display: flex;
+  z-index: 4;
+}

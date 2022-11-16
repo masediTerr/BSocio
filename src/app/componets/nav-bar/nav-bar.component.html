@@ -1,0 +1,38 @@
+<nav>
+  <ul>
+    <li>
+      <div class="switch" >
+        <label *ngIf="currentView == 'Dashboard'" for="current-view">{{currentView}}</label>
+        <label *ngIf="currentView == 'Settings'" for="current-view">{{currentView}}</label>
+        <div class="down-arrow">
+          <input type="checkbox" name="view" id="uView" hidden>
+          <label for="uView"><i>></i></label>
+          <div class="switch-cases" >
+            <label for="uView" (click)="currentView = 'Dashboard'" routerLinkActive="active current" routerLink="/{{isAdmin?'admin':'user'}}/dashboard">Dashboard</label>
+            <label for="uView" (click)="currentView = 'Settings'" routerLinkActive="active current" routerLink= "{{isAdmin?'admin':'user'}}/settings">Settings</label>
+            
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <label for="workspace">Workspace: {{userWorkspace}}</label>
+      <div class="down-arrow">
+        <input type="checkbox" name="workspace" id="uSpace" hidden>
+        <label for="uSpace"><i>></i></label>
+        <div class="switch-cases">
+          <label for="uSpace" (click)="User()" routerLink="/user{{'/'+currentView|lowercase}}">User</label>
+          <label for="uSpace"  (click)="Admin()" routerLink="/admin{{'/'+currentView|lowercase}}">Admin</label>
+          
+        </div>
+      </div>
+    </li>
+    <li id="rt-user">
+      <label for="user"><a routerLink="/logout">Sign out</a></label>
+      <label for="user">{{userWorkspace}}: <a href="/dashboard">Terrence Mokgope</a></label>
+  </li>
+  </ul>
+  <div class="nav-btm-line" id="a"></div>
+  <div class="nav-btm-line" id="b"></div>
+</nav>

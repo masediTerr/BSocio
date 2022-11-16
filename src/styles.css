@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h4{
+	color: #750303a8;
+}
+.main-u{
+  width: 100%;
+  height: calc(100% - 88px);
+  min-height: calc(100vh - 99px);
+  background-color: rgba(255, 0, 0, 0.13);
+  display: flex;
+  padding-top: 20px;
+}
+
+.ux-mode{
+  width: 25%;
+  height: calc(100vh - 140px);
+  
+}
+.ux-frame{
+  width: 100%;
+  height: calc(100% - 11px);
+  margin: 10px 1px 0 auto;
+  overflow-x: hidden;
+  position: relative;
+  padding-right: 2px;
+}
+.ux-mode:hover .ux-frame::-webkit-scrollbar{
+  
+  background-color: #ffffffe2;
+}

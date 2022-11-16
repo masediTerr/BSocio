@@ -1,0 +1,19 @@
+<div class="searchBar">
+  <div class="input-search">
+    <input type="text" name="search" id="search" placeholder="Search members, information etc.">
+  
+  </div>
+  <div class="down-arrow">
+    <span id="in">{{searchIn }}</span>
+    <input type="checkbox" name="workspace" id="uSearch" hidden>
+    <label for="uSearch"><i>></i></label>
+    <div class="switch-cases">
+      <label for="uSearch" (click)="searchIn='All'">All</label>
+      <label for="uSearch" (click)="searchIn='Members'">Members</label>
+      <label for="uSearch"  (click)="searchIn='News'">News</label>
+      <label for="uSearch"  (click)="searchIn='Villages'">Villages</label>
+      
+    </div>
+  </div>
+  
+</div>

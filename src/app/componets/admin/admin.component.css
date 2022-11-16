@@ -1,0 +1,235 @@
+.workspace-mode{
+  width: 75%;
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: row;
+}
+.switch-mode{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.management-table{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+table{
+  width:100%;
+  
+  position: relative;
+}
+.mark{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.table-head{
+  width: 70%;
+  margin: 30px 0 0 20px;
+  background: white;
+}
+.table-data{
+  width: 85%;
+  height: 65%;
+  overflow: auto;
+  /* margin-top: 40px; */
+  margin: 15px 0 0 20px;
+}
+.ux-frame::-webkit-scrollbar{
+  width: 7px;
+  transition: all 0.5s ease-in-out;
+  
+}
+.table-data::-webkit-scrollbar{
+  width: 7px;
+ 
+  /* background-color: #ffffffe2; */
+}
+.table-data:hover::-webkit-scrollbar{
+  
+  background-color: #ffffffe2;
+}
+.table-data:hover::-webkit-scrollbar-thumb{
+  background: gray;
+}
+#dta1{
+  padding: 0 10px;
+}
+#dta{
+  padding-right: 20px;
+}
+th{
+  border-bottom: 1px solid;
+  padding-bottom: 8px;
+
+}
+searchBar{
+  width: 80%;
+}
+tr>td:first-child{
+  background-color: #201c1ce7;
+  padding: 0 10px;
+  color: white;
+}
+
+td{
+  padding: 0 10px;
+  height: 25px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+ 
+}
+td>form>button{
+  padding: 4px 0 4px 8px;
+  background: #201c1ce7;
+  color: rgba(255, 255, 255, 0.815);
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  width: 100px;
+  transition: all .5s ease-in-out;
+}
+td>form>button:hover{
+  background: #201c1c8f;
+}
+
+button:disabled{
+  opacity: .2;
+  color: inherit;
+}
+td>#standing{
+  padding: 2px 16px;
+  background: green;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.781);
+}
+#fn{
+  width: 15%;
+}
+#fn span{
+  background: white;
+  color: black;
+  height: 100%;
+  padding: 4px 8px 4px 4px;
+}.cont{
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+}
+.switch-cases{
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  padding: 10px 0;
+  width: 12rem;
+  background: linear-gradient(50deg,#ffffffa9,#0000221a);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 14px -9px black;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  border-radius: 2px;
+}
+
+.switch-cases label{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  
+}
+.switch-cases label:hover:not(:last-child){
+  border-bottom: 1px solid #33333363;
+}
+.switch-cases label:hover{
+  opacity: .7;
+}
+:is(.ux-mode:hover, .table-data:hover) ::-webkit-scrollbar-thumb{
+  background: gray;
+}
+
+
+.adjustables{
+  width: 85%;
+  height: 20%;
+  background-color: white;
+  margin: 0 0 0 15px;
+  position: relative;
+}
+.conts{
+  position: absolute;
+  right: 0;
+}
+.cont>label{
+  width: 24px;height: 24px;
+  font-size: 1.4rem;
+  background-color: rgba(255, 192, 203, 0.608);
+  border-radius: 50%;
+  margin-left: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.cont>label:hover{
+  background-color: rgba(255, 192, 203, 0.848);
+  transform: rotate(135deg) scale(1.05);
+}
+.option-admin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  cursor: pointer;
+}
+.options-admin{
+  transform: rotate(90deg) translateY(-20%);
+  font-weight: 900;
+  font-size: 1.3rem;
+  line-height: .7;
+  cursor: pointer;
+}
+.mem{
+  text-align: left;
+  padding: 0 10px;
+  width: 30%;
+  /* max-width: 30%; */
+}
+:is(#uSelected:checked) ~ .switch-cases{
+  display: flex;
+  z-index: 4;
+}
+:is(#uSelected:checked) ~ label{
+  transform: rotate(90deg);
+}
+
+.active{
+  display: flex;
+  z-index: 6;
+  
+}
+.default{
+  /* background-color: rgb(250, 250, 250); */
+  color: rgb(24, 20, 20);
+}
+.selected{
+  background-color: brown;
+  color: inherit;
+  
+}
+.selected:nth-last-child(1n + 1 ){
+  box-shadow: 2px 7px 9px -3px rgb(0, 0, 0);
+}

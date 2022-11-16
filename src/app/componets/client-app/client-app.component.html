@@ -1,0 +1,274 @@
+<div class="main-u">
+  <div class="ux-mode">
+    <div class="ux-frame">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="workspace-mode">
+    
+    <div class="switch-mode">
+      <searchBar></searchBar>
+      <div class="announce">
+        <div class="title">
+          <h2>news feed</h2>
+          <div class="toolbar">
+            <div class="rotate">
+              <span id="d1">.</span>
+              <span id="d2">.</span>
+              <span id="d3">.</span>
+              <span id="d4">.</span>
+            </div>
+          </div>
+        </div>
+        <div class="list-recent-announces mg">
+          <ul class="posts">
+            <li>
+              <div class="readOrNot">
+                <span (click)="read=true" *ngIf="!read" >new</span>
+                <span *ngIf="read"></span>
+              </div>
+              <div class="msg-conten">
+                <div class="user-detail">
+                  <span  class="indent">from:</span>
+                  <span>terrence masedi</span>
+                  <span id="date">10/11/2022</span>
+                </div>
+                <div class="msg-subject">
+                  <span  class="indent">subject:</span>
+                  <p>lkdlsk fhhfsoftwaer engineereing is fro us all by the e=way we all wpould like to tro get a job that is of our choices</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="readOrNot">
+                <span (click)="read=true" *ngIf="!read" >new</span>
+                <span *ngIf="read"></span>
+              </div>
+              <div class="msg-conten">
+                <div class="user-detail">
+                  <span  class="indent">from:</span>
+                  <span>terrence masedi</span>
+                  <span id="date">10/11/2022</span>
+                </div>
+                <div class="msg-subject">
+                  <span  class="indent">subject:</span>
+                  <p>lkdlsk fhhfsoftwaer engineereing is fro us all by the e=way we all wpould like to tro get a job that is of our choices</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="readOrNot">
+                <span (click)="read=true" *ngIf="!read" >new</span>
+                <span *ngIf="read"></span>
+              </div>
+              <div class="msg-conten">
+                <div class="user-detail">
+                  <span  class="indent">from:</span>
+                  <span>terrence masedi</span>
+                  <span id="date">10/11/2022</span>
+                </div>
+                <div class="msg-subject">
+                  <span  class="indent">subject:</span>
+                  <p>lkdlsk fhhfsoftwaer engineereing is fro us all by the e=way we all wpould like to tro get a job that is of our choices</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="readOrNot">
+                <span (click)="read=true" *ngIf="!read" >new</span>
+                <span *ngIf="read"></span>
+              </div>
+              <div class="msg-conten">
+                <div class="user-detail">
+                  <span  class="indent">from:</span>
+                  <span>terrence masedi</span>
+                  <span id="date">10/11/2022</span>
+                </div>
+                <div class="msg-subject">
+                  <span  class="indent">subject:</span>
+                  <p>lkdlsk fhhfsoftwaer engineereing is fro us all by the e=way we all wpould like to tro get a job that is of our choices</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="readOrNot">
+                <span (click)="read=true" *ngIf="!read" >new</span>
+                <span *ngIf="read"></span>
+              </div>
+              <div class="msg-conten">
+                <div class="user-detail">
+                  <span  class="indent">from:</span>
+                  <span>terrence masedi</span>
+                  <span id="date">10/11/2022</span>
+                </div>
+                <div class="msg-subject">
+                  <span  class="indent">subject:</span>
+                  <p>lkdlsk fhhfsoftwaer engineereing is fro us all by the e=way we all wpould like to tro get a job that is of our choices</p>
+                </div>
+              </div>
+            </li>
+           
+          </ul>
+        </div>
+        
+      </div>
+      <div class="announcements">
+        <div class="title">
+          <h2>Announcements</h2>
+          <div class="toolbar">
+            <div class="rotate">
+              <span id="d1">.</span>
+              <span id="d2">.</span>
+              <span id="d3">.</span>
+              <span id="d4">.</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contents">
+          
+          <div class="list-recent-announces">
+            <ul class="shift-right clans">
+              <li class="clan">
+                <div class="details">
+                  <ul>
+                    <h4>Family of the deceased</h4>
+                    <li>Clan Name: <span>Some surname</span></li>
+                    <li>Burial Date: <span>17/06/2021</span></li>
+                    <li>Due Date to Pay: <span>Some surname</span></li>
+                    <li>
+                      <h4>The deceaced</h4>
+                      <ul class="shift-right">
+                        <li>Name(s): <span>Anonymous Surname</span></li>
+                        <li>DOD: <span>10/06/2021</span></li>
+                        <li>Cause Of Death: <span>Sickness</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="dcd">
+                    <img src="../assets/food.jpg" alt="Deceased">
+                  </div>
+                </div>
+                <div class="pay-btn-cont">
+                  <button class="btn"> <span></span> Pay now</button>
+                </div>
+                <div class="views">
+
+                </div>
+              </li>
+              <li class="clan">
+                <div class="details">
+                  <ul>
+                    <h4>Family of the deceased</h4>
+                    <li>Clan Name: <span>Some surname</span></li>
+                    <li>Burial Date: <span>17/06/2021</span></li>
+                    <li>pay by: <span>Some surname</span></li>
+                    <li>
+                      <h3>The deceaced</h3>
+                      <ul class="shift-right">
+                        <li>Name(s): <span>Anonymous Surname</span></li>
+                        <li>DOD: <span>10/06/2021</span></li>
+                        <li>Cause Of Death: <span>Sickness</span></li>
+                        
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="dcd">
+                    <img src= '../assets/food.jpg' alt="Deceased">
+                  </div>
+                  
+                </div>
+                <div class="pay-btn-cont">
+                  <button class="btn"><span></span>Pay now</button>
+                </div>
+
+              </li>
+              <li class="clan">
+                <ul>
+                  <li>Clan Name: <span>Some surname</span></li>
+                  <li>Burial Date: <span>17/06/2021</span></li>
+                  <li>Due Date to Pay: <span>Some surname</span></li>
+                  <li>
+                    <h3>The deceaced</h3>
+                    <ul class="shift-right">
+                      <li>Name(s): <span>Anonymous Surname</span></li>
+                      <li>DOD: <span>10/06/2021</span></li>
+                      <li>Cause Of Death: <span>Sickness</span></li>
+                      <li>
+                        <img src="" alt="">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="pay-btn-cont">
+                  <button class="btn">Pay now</button>
+                </div>
+
+              </li>
+              <li class="clan">
+                <ul>
+                  <li>Clan Name: <span>Some surname</span></li>
+                  <li>Burial Date: <span>17/06/2021</span></li>
+                  <li>Due Date to Pay: <span>Some surname</span></li>
+                  <li>
+                    <h3>The deceaced</h3>
+                    <ul class="shift-right">
+                      <li>Name(s): <span>Anonymous Surname</span></li>
+                      <li>DOD: <span>10/06/2021</span></li>
+                      <li>Cause Of Death: <span>Sickness</span></li>
+                      <li>
+                        <img src="" alt="">
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="pay-btn-cont">
+                  <button class="btn">Pay now</button>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="status">
+      <div class="timeDate">
+        <span>12:48</span>
+        <small>AM</small>
+        <div class="current-date">
+           saturday 12/11/2022
+        </div>
+      </div>
+      <div class="upcomings">
+        <span>Upcoming events</span>
+        <ol>
+          <li>
+            <div class="divides">
+              <span>Date:</span>
+              <span>25/12/2022</span>
+            </div>
+            <div class="divides">
+              <span>Time:</span>
+              <span>06:00 - 00:00</span>
+            </div>
+            <div class="divides">
+              <span>Subj:</span>
+              <span>Christimas Day</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div  class="standing-status s1"  >
+        <span>Stdn.State: #{{standingStatus | uppercase}}</span>
+        <div  class="standing-status s2" *ngFor=" let sta of stand" >
+          <div aria-disabled="true" *ngIf="sta.status === standingStatus" class=" ss {{sta.class}}"><span>{{sta.contents}}</span><b>{{sta.symbol}}</b></div>
+          <span id="note" *ngIf="sta.status === standingStatus"><b>*</b>{{sta.info}}</span>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

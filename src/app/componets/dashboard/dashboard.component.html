@@ -1,0 +1,86 @@
+
+<div class="user-profile">
+  <div class="u-section">
+    <div class="headers">
+      <h4>User information</h4>
+      <div class="dots"><label for="uBs"><b>...</b></label></div>
+    </div>
+    <ul>
+      <li>Names: <span>Terrence masedi</span></li>
+      <li>BS| Serial-code: <span>Vil-Ward-Gen-AgeC-CODE</span></li>
+      <li>Location: <span>Terrence masedi</span></li>
+      <li>Email: <span>Terrencemasedi@gmail.com</span></li>
+      <li>Package-level: <span>type of policy</span></li>
+      <li>Village-membership: 
+        <ul id="villages">
+          <li>village joined</li>
+          <li><button>JOIN VILLAGE</button></li>
+        </ul>
+      </li>
+      <button>Edit user information</button>
+    </ul>
+  </div>
+  <div class="u-section">
+    <div class="headers">
+      <h4>BS|Account information</h4>
+      <div class="dots" ><label title="BS | options" for="uBs"><b>...</b></label>
+        <input type="checkbox" expand name="options" id="uBs" hidden>
+        <div class="switch-cases" >
+          <label for="uBs" (click)="bsOptions = 'view'" routerLink="/user/view">View</label>
+          <label for="uBs" (click)="bsOptions= 'recharge'" routerLink= "/user/deposit">Top-up</label>
+          <label for="uBs" (click)="bsOptions= 'loan'" routerLink= "/user/loan">Lend money</label>
+          
+        </div>
+      </div>
+      
+      
+      <!-- <div class="modal">
+        <span>View</span>
+        <span>Top-up</span>
+        <span>Get loan 
+          <div class="popup">
+            <div class="close">+</div>
+            <form method="post">
+              <div class="user-req">
+                <label for="loan">GET LOAN - Instantly</label>
+                <input type="radio" checked hidden name="user-req" value="loan" id="">
+              </div>
+              <div class="grp-btn">
+                <input type="number" name="rq-amount" placeholder="e.g.{{amount |currency }}" id="">
+                <button >Request Loan</button>
+              </div>
+            </form>
+          </div>
+        </span>
+      </div> -->
+    </div>
+    <ul>
+      <li>Bank account: <span>******5634</span></li>
+      <li>Bank name: <span>Capitec</span></li>
+        <i>*********************************</i>
+      <li>Transaction history</li>
+      <li>BS|account Balance: <span>R20.00</span></li>
+      <li>BS|outstanding amount: <span>-R20.00</span></li>
+      <li><form method="post">
+  
+        <div class="option">
+          <div class="user-req">
+            <input hidden  type="radio" name="user-req" value="repay" id="repay">
+            <label routerLink="/user/dashboard" routerLinkActive="current" for="repay">Repay Loan</label>
+          </div>
+    
+          <div class="user-req">
+            <input hidden  type="radio" name="user-req" value="loan" id="loan">
+            <label routerLink="/user/dashboard" routerLinkActive="current" for="loan">Get Loan</label>
+          </div>
+        </div>
+        {{ amountValue}}
+        <input [(ngModel)]="amountValue" type="number" name="rq-amount" id="">
+        <div class="btn-group">
+          <button type="submit">PROCEED</button><button type="reset">CLEAR</button>
+        </div>
+      </form></li>
+    </ul>
+  </div>
+  
+</div>
